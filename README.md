@@ -65,7 +65,8 @@ The work demonstrates advanced data science skills including data cleaning, feat
 - Pytrends for Google Trends data extraction
 - Facebook Prophet for time series forecasting
 
---## Project Blog
+--
+## Project Blog
 
 For a detailed explanation and walkthrough of this project, check out my blog post:  
 [Analyzing the Impact of Air Pollution on Asthma Trends in Delhi](https://medium.com/@adk0600901/analyzing-the-impact-of-air-pollution-on-asthma-trends-in-delhi-a-machine-learning-approach-04843f1e8f23)
