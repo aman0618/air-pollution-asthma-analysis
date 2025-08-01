@@ -23,5 +23,4 @@ We conducted:
 ## 🎯 Outcome
 This project demonstrates how data science and public data sources can be combined to analyze **public health impact of environmental pollution**. Useful for government, urban planning, and health research.
 
----
-✅ Built as part of a **PhD application portfolio** by Amandeep Kaur.
+
