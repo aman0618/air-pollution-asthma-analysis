@@ -1,26 +1,70 @@
-# 🌫️ Air Pollution and Asthma Trends in Indian Cities
+# Air Pollution and Asthma Trends Analysis in Delhi, India
 
-This project explores the relationship between **PM2.5 pollution levels** and **asthma-related search trends** in India using real-world air quality data and Google Trends.
+## Overview
 
-## 📁 Contents
-- `air_pollution_heath_impact.ipynb`: Main Jupyter Notebook (with markdown explanations)
-- `delhi_pm25_2022_2023_sample.csv`: PM2.5 dataset
+This project investigates the impact of air pollution, specifically PM2.5 particulate matter, on public health trends related to asthma in Delhi, India. Using a combination of environmental data and digital epidemiology (Google search trends), we build predictive machine learning models and time series forecasts to analyze and predict asthma-related health indicators.
 
+The work demonstrates advanced data science skills including data cleaning, feature engineering, regression modeling, hyperparameter tuning, and time series forecasting with Facebook Prophet.
 
-## 📊 Project Summary
-We conducted:
-- Weekly resampling of air pollution data
-- Merging with Google Trends on "asthma"
-- Correlation and lag analysis
-- Feature engineering (temperature, season)
-- Final regression model (R² = **0.444**)
+---
 
-## 🛠️ Tools & Libraries
-- Python, pandas, numpy, seaborn
-- scikit-learn, statsmodels, pytrends
-- Jupyter Notebook (VS Code)
+## Data Sources
 
-## 🎯 Outcome
-This project demonstrates how data science and public data sources can be combined to analyze **public health impact of environmental pollution**. Useful for government, urban planning, and health research.
+- **PM2.5 Pollution Data**: Daily air quality measurements (PM2.5) for Delhi from 2022 to 2023.
+- **Google Trends Data**: Weekly search interest for the keyword "asthma" in India over the same period, used as a proxy for public health concern.
+- **Simulated Environmental Features**: Temperature values simulated based on seasonality, to enrich feature space.
+- **Simulated Health Data**: Proxy variables such as hospital visits (if applicable) added to enhance model complexity.
+
+---
+
+## Project Steps and Methodology
+
+1. **Data Loading and Exploration**  
+   Loaded and inspected PM2.5 and Google Trends datasets for completeness and structure.
+
+2. **Data Alignment and Resampling**  
+   Resampled daily PM2.5 data to weekly averages to match the weekly frequency of Google Trends data.
+
+3. **Feature Engineering**  
+   Created lagged PM2.5 features (1-, 2-, and 3-week lags) to capture delayed effects on asthma trends.  
+   Added temporal features such as month and season mapped from date.  
+   Simulated temperature values based on seasonal distribution.
+
+4. **Exploratory Data Analysis (EDA)**  
+   Visualized time series, correlation matrices, and scatter plots to understand relationships.
+
+5. **Regression Modeling**  
+   Applied Linear Regression, Random Forest, and XGBoost models to predict asthma trends using engineered features.  
+   Tuned Random Forest hyperparameters for improved accuracy.
+
+6. **Time Series Forecasting**  
+   Used Facebook Prophet to model and forecast asthma trends, capturing yearly seasonality and trends.
+
+7. **Model Evaluation and Interpretation**  
+   Evaluated models using MAE, MSE, and R² metrics; visualized regression fits and forecast components.
+
+---
+
+## Key Findings
+
+- Moderate positive correlations found between PM2.5 levels and asthma-related search interest, stronger when considering lagged pollution values.
+- Random Forest regression provided the best predictive performance (MAE ≈ 3.99, R² ≈ 0.39), outperforming XGBoost in this context.
+- Incorporation of seasonal and environmental features significantly enhanced model explanatory power.
+- Prophet forecasting effectively captured seasonal patterns and provided plausible short-term asthma trend predictions.
+- The study underscores the value of combining environmental monitoring with digital epidemiology for public health insights.
+
+---
+
+## Tools and Libraries Used
+
+- Python (3.x)
+- Pandas, NumPy for data manipulation
+- Matplotlib, Seaborn for visualization
+- Scikit-learn for machine learning models and evaluation
+- Statsmodels for time series decomposition
+- Pytrends for Google Trends data extraction
+- Facebook Prophet for time series forecasting
+
+---
 
 
