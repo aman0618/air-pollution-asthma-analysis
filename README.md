@@ -8,7 +8,7 @@ This repository contains the code and analysis for the research project:
 (manuscript ready for submission)
 
 The goal of this project is to investigate how daily air pollution (PM2.5) relates to asthma-related health-seeking behavior as observed through web signals.
-
+**A full research manuscript based on this work is prepared for submission to a peer-reviewed journal.**
 ---
 
 ## Motivation
