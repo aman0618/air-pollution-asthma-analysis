@@ -67,14 +67,6 @@ The analysis workflow includes:
 
 ---
 
-## Notebooks
-
-- `data_preprocessing.ipynb`
-- `feature_engineering.ipynb`
-- `modeling.ipynb`
-- `results_analysis.ipynb`
-
----
 
 ## Usage Instructions
 
