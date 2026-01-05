@@ -1,75 +1,86 @@
-# Air Pollution and Asthma Trends Analysis in Delhi, India
+# Air Pollution and Asthma Analysis
 
 ## Overview
 
-This project investigates the impact of air pollution, specifically PM2.5 particulate matter, on public health trends related to asthma in Delhi, India. Using a combination of environmental data and digital epidemiology (Google search trends), we build predictive machine learning models and time series forecasts to analyze and predict asthma-related health indicators.
+This repository contains the code and analysis for the research project:
 
-The work demonstrates advanced data science skills including data cleaning, feature engineering, regression modeling, hyperparameter tuning, and time series forecasting with Facebook Prophet.
+**Asthma and Air Pollution: A Computational Study of PM2.5 Exposure and Digital Health-Seeking Behavior**  
+(manuscript ready for submission)
 
----
-
-## Data Sources
-
-- **PM2.5 Pollution Data**: Daily air quality measurements (PM2.5) for Delhi from 2022 to 2023.
-- **Google Trends Data**: Weekly search interest for the keyword "asthma" in India over the same period, used as a proxy for public health concern.
-- **Simulated Environmental Features**: Temperature values simulated based on seasonality, to enrich feature space.
-- **Simulated Health Data**: Proxy variables such as hospital visits (if applicable) added to enhance model complexity.
+The goal of this project is to investigate how daily air pollution (PM2.5) relates to asthma-related health-seeking behavior as observed through web signals.
 
 ---
 
-## Project Steps and Methodology
+## Motivation
 
-1. **Data Loading and Exploration**  
-   Loaded and inspected PM2.5 and Google Trends datasets for completeness and structure.
+Respiratory conditions like asthma are strongly influenced by air quality. Traditional epidemiological studies measure clinical outcomes, but digital epidemiology enables us to observe behavioral responses through online search patterns.
 
-2. **Data Alignment and Resampling**  
-   Resampled daily PM2.5 data to weekly averages to match the weekly frequency of Google Trends data.
+This project:
+- Aligns pollution exposure time series with health-seeking search behavior
+- Explores lagged responses
+- Applies machine learning models to understand patterns
 
-3. **Feature Engineering**  
-   Created lagged PM2.5 features (1-, 2-, and 3-week lags) to capture delayed effects on asthma trends.  
-   Added temporal features such as month and season mapped from date.  
-   Simulated temperature values based on seasonal distribution.
-
-4. **Exploratory Data Analysis (EDA)**  
-   Visualized time series, correlation matrices, and scatter plots to understand relationships.
-
-5. **Regression Modeling**  
-   Applied Linear Regression, Random Forest, and XGBoost models to predict asthma trends using engineered features.  
-   Tuned Random Forest hyperparameters for improved accuracy.
-
-6. **Time Series Forecasting**  
-   Used Facebook Prophet to model and forecast asthma trends, capturing yearly seasonality and trends.
-
-7. **Model Evaluation and Interpretation**  
-   Evaluated models using MAE, MSE, and R² metrics; visualized regression fits and forecast components.
+This analysis contributes to human-centered environmental data science and responsible AI for public health.
 
 ---
 
-## Key Findings
+## Data
 
-- Moderate positive correlations found between PM2.5 levels and asthma-related search interest, stronger when considering lagged pollution values.
-- Random Forest regression provided the best predictive performance (MAE ≈ 3.99, R² ≈ 0.39), outperforming XGBoost in this context.
-- Incorporation of seasonal and environmental features significantly enhanced model explanatory power.
-- Prophet forecasting effectively captured seasonal patterns and provided plausible short-term asthma trend predictions.
-- The study underscores the value of combining environmental monitoring with digital epidemiology for public health insights.
+### Sources
+
+1. **Air Pollution Data (PM2.5)**  
+   - Source: (Add actual source — e.g., CPCB / OpenAQ / EPA)
+
+2. **Google Trends / Search Behavior**
+   - Search terms: asthma, wheezing, inhaler, etc.
+   - Weekly search interest
+   - Source: Google Trends
 
 ---
 
-## Tools and Libraries Used
+## Methodology
 
-- Python (3.x)
-- Pandas, NumPy for data manipulation
-- Matplotlib, Seaborn for visualization
-- Scikit-learn for machine learning models and evaluation
-- Statsmodels for time series decomposition
-- Pytrends for Google Trends data extraction
-- Facebook Prophet for time series forecasting
+The analysis workflow includes:
 
---
-## Project Blog
+1. **Time Alignment**
+   - Convert daily PM2.5 to weekly aggregates
+   - Align with Google Trends weekly data
 
-For a detailed explanation and walkthrough of this project, check out my blog post:  
-[Analyzing the Impact of Air Pollution on Asthma Trends in Delhi](https://medium.com/@adk0600901/analyzing-the-impact-of-air-pollution-on-asthma-trends-in-delhi-a-machine-learning-approach-04843f1e8f23)
--
+2. **Feature Engineering**
+   - Create lagged variables
+   - Rolling averages
 
+3. **Modeling**
+   - Regression
+   - Random Forest, Gradient Boosting, XGBoost
 
+4. **Evaluation**
+   - R², RMSE
+   - Feature importance
+
+---
+
+## Results Summary
+
+- Tree-based models tend to outperform linear regression.
+- Lagged pollution features help identify delayed behavioral responses.
+
+---
+
+## Notebooks
+
+- `data_preprocessing.ipynb`
+- `feature_engineering.ipynb`
+- `modeling.ipynb`
+- `results_analysis.ipynb`
+
+---
+
+## Usage Instructions
+
+```bash
+git clone https://github.com/aman0618/air-pollution-asthma-analysis.git
+cd air-pollution-asthma-analysis
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
