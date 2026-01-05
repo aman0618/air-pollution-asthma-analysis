@@ -29,7 +29,7 @@ This analysis contributes to human-centered environmental data science and respo
 ### Sources
 
 1. **Air Pollution Data (PM2.5)**  
-   - Source: (Add actual source — e.g., CPCB / OpenAQ / EPA)
+   - Source: OpenAQ 
 
 2. **Google Trends / Search Behavior**
    - Search terms: asthma, wheezing, inhaler, etc.
