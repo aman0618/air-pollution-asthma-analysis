@@ -36,7 +36,7 @@ This shows asthma trends are influenced by **multiple interacting factors**, not
 |-----------------------|--------|
 | Linear Regression     | < 0.01 |
 | With Feature Engg     | ~0.49  |
-| Random Forest         | ~0.61 ✅ |
+| Random Forest         | ~0.61  |
 | Gradient Boosting     | ~0.58  |
 | XGBoost               | ~0.26  |
 
