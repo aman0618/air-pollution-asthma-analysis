@@ -1,79 +1,45 @@
-# Air Pollution and Asthma Analysis
+# PM2.5 and Asthma Trend Prediction using Machine Learning
 
-## Overview
+##  Overview
+This project investigates the relationship between PM2.5 air pollution and asthma-related behavioral trends using machine learning and time-series analysis.
 
-This repository contains the code and analysis for the research project:
-
-**Asthma and Air Pollution: A Computational Study of PM2.5 Exposure and Digital Health-Seeking Behavior**  
-(manuscript ready for submission)
-
-The goal of this project is to investigate how daily air pollution (PM2.5) relates to asthma-related health-seeking behavior as observed through web signals.
-
-A full research manuscript based on this work is prepared for submission to a peer-reviewed journal.
----
-
-## Motivation
-
-Respiratory conditions like asthma are strongly influenced by air quality. Traditional epidemiological studies measure clinical outcomes, but digital epidemiology enables us to observe behavioral responses through online search patterns.
-
-This project:
-- Aligns pollution exposure time series with health-seeking search behavior
-- Explores lagged responses
-- Applies machine learning models to understand patterns
-
-This analysis contributes to human-centered environmental data science and responsible AI for public health.
+This work supports a research manuscript submitted to *SN Computer Science (Springer Nature)*.
 
 ---
 
-## Data
-
-### Sources
-
-1. **Air Pollution Data (PM2.5)**  
-   - Source: OpenAQ 
-
-2. **Google Trends / Search Behavior**
-   - Search terms: asthma, wheezing, inhaler, etc.
-   - Weekly search interest
-   - Source: Google Trends
+##  Problem Statement
+Can PM2.5 alone predict asthma-related trends?
 
 ---
 
-## Methodology
+##  Key Findings
+- PM2.5 alone is a **very weak predictor** (R² < 0.01)
+- Incorporating **lagged, seasonal, and environmental features** significantly improves performance
+- **Random Forest achieved best performance (R² ≈ 0.61)**
 
-The analysis workflow includes:
-
-1. **Time Alignment**
-   - Convert daily PM2.5 to weekly aggregates
-   - Align with Google Trends weekly data
-
-2. **Feature Engineering**
-   - Create lagged variables
-   - Rolling averages
-
-3. **Modeling**
-   - Regression
-   - Random Forest, Gradient Boosting, XGBoost
-
-4. **Evaluation**
-   - R², RMSE
-   - Feature importance
+This shows asthma trends are influenced by **multiple interacting factors**, not pollution alone.
 
 ---
 
-## Results Summary
+##  Methods Used
+- Linear Regression
+- Random Forest
+- Gradient Boosting
+- XGBoost
+- Prophet (Time-Series Forecasting)
 
-- Tree-based models tend to outperform linear regression.
-- Lagged pollution features help identify delayed behavioral responses.
+---
+
+##  Results Summary
+
+| Model                  | R² Score |
+|-----------------------|--------|
+| Linear Regression     | < 0.01 |
+| With Feature Engg     | ~0.49  |
+| Random Forest         | ~0.61 ✅ |
+| Gradient Boosting     | ~0.58  |
+| XGBoost               | ~0.26  |
 
 ---
 
 
-## Usage Instructions
-
-```bash
-git clone https://github.com/aman0618/air-pollution-asthma-analysis.git
-cd air-pollution-asthma-analysis
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
