@@ -41,5 +41,32 @@ This shows asthma trends are influenced by **multiple interacting factors**, not
 | XGBoost               | ~0.26  |
 
 ---
+##  Project Structure
+air-pollution-asthma-analysis/
+│
+├── data/ # Raw and processed datasets
+├── notebooks/ # Jupyter notebooks
+├── src/ # Core scripts (models, preprocessing)
+├── results/ # Graphs and outputs
+└── README.md
 
 
+---
+
+## 📈 Key Insights
+- Environmental health modeling requires **multi-factor analysis**
+- Feature engineering (lags, seasonality) is critical
+- Ensemble models outperform linear models in complex systems
+
+---
+
+## 🔁 Reproducibility
+To run the project:
+1. Clone the repository
+2. Install dependencies
+3. Run notebooks in order
+
+---
+
+## 📜 License
+For academic and research use only
